@@ -81,8 +81,8 @@ E = \frac{1}{2n} \sum_{i=1}^{n} (t^{(i)} - y^{(i)})^2
 \\ \; \\
 Now
 \\ \; \\
-\text{let $`\theta`$  be a parameter}
-\\ \; \\
+\text{let $\theta$  be a parameter}
+\
 
 \frac{\partial E}{\partial \theta} = \frac{1}{2n} \sum_{i=1}^{n} 2 (t^{(i)} - y^{(i)}) \frac{\partial}{\partial \theta}
 \\ \; \\
