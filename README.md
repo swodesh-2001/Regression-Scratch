@@ -60,8 +60,8 @@ $$
 Now we have to minimize this cost function using the gradient descent algorithm. For that we have to find the partial derivative of the cost function with each parameter. The calculation of each parameters gradient is shown below :
 
 $$
-\text{Error} (E) = \sum_{i=1}^{n} E^{(i)} 
-\text{where, } n \rightarrow \text{number of datasets}
+\text{Error} (E) = \sum_{i=1}^{n} E^{(i)} //
+\text{where, } n \rightarrow \text{number of datasets} //
 \text{Error} = \sum_{i=1}^{n} \left( \frac{1}{2n} (t^{(i)} - y^{(i)})^2 \right) 
 \text{where, } t \rightarrow \text{actual target}   
 $$ 
