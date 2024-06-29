@@ -48,11 +48,9 @@ With the random initialized parameter we find the output. From the output we fin
 
 $$
 Y^{hat} = (a(x^2)+bx+ c)
-$$
-$$  
+ 
 Error =  Y^{hat} - Y^{actual}
-$$
-$$
+ 
 Cost = \frac{1}{2n} \sum_{i}^n Error^2
 $$
  
@@ -98,7 +96,7 @@ $$
 
 Thus
 
- $$
+$$
 \frac{\partial E}{\partial A} = \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - t^{(i)}) (x^{(i)})^2
  
 \frac{\partial E}{\partial B} = \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - t^{(i)}) x^{(i)}
