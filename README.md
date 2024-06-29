@@ -261,7 +261,7 @@ Let $`z = w_1 x_1 + w_2 x_2 + b`$ be our linear model, then let $` \hat{y} = a =
 
 Also, let $`\mathcal{J}(\hat{y}, y)`$ represent our log-loss function where $`\hat{y}`$ is the predicted class and $`y`$ is the actual class.
 
-```math
+ 
 \begin{align*}
 \mathcal{J}(\hat{y}, y) = - y \log(a) - (1-y) \log(1-a)  \tag{$\hat{y}$ = a }
 \end{align*}
@@ -291,7 +291,7 @@ Similarly,
 \begin{align*}
 \frac{\partial a}{\partial z} = a(1-a)  
 \end{align*}
-```
+ 
 Lastly,
 ```math
 \frac{\partial z} {\partial w_1} = \frac{\partial (w_1 x_1 + w_2 x_2 + b)}{\partial w_1} = x_1
