@@ -63,7 +63,7 @@ Now we have to minimize this cost function using the gradient descent algorithm.
 
  
 
-```math
+$$
 
 \text{Error} (E) = \sum_{i=1}^{n} E^{(i)} 
 \\ \; \\
@@ -74,8 +74,10 @@ where, n \rightarrow \text{number of datasets}
 where, t \rightarrow \text{actual target}   
 \\ \; \\
 y \rightarrow  \text{predicted output}
-```
-```math
+$$
+
+
+$$
 \\ \; \\
 E = \frac{1}{2n} \sum_{i=1}^{n} (t^{(i)} - y^{(i)})^2 
 \\ \; \\
@@ -87,20 +89,17 @@ Now
 \frac{\partial E}{\partial \theta} = \frac{1}{2n} \sum_{i=1}^{n} 2 (t^{(i)} - y^{(i)}) \frac{\partial}{\partial \theta}
 \\ \; \\
 = \frac{1}{2n} \sum_{i=1}^{n} 2 (t^{(i)} - y^{(i)}) \left( -\frac{\partial y^{(i)}}{\partial \theta} \right)
-\\ \; \\
-```
-```math
+$$
+
+$$
 
  = \frac{1}{n} \sum_{i=1}^{n} (t^{(i)} - y^{(i)}) \left( -\frac{\partial y^{(i)}}{\partial \theta} \right)
  \\ \; \\
  = \frac{1}{n} \sum_{i=1}^{n} (y^{(i) - t^{(i)}}) \left( \frac{\partial y^{(i)}}{\partial \theta} \right)
  \\ \; \\
- ```
- 
-
-```math
-Now
-\\ \; \\
+$$
+ Now
+$$
 \text{if } \theta = A
 \\ \; \\
 \frac{\partial y^{(i)}}{\partial A} = [x^{(i)}]^2
@@ -110,9 +109,9 @@ Now
 \frac{\partial y^{(i)}}{\partial C} = 1
 \\ \; \\
 \text{Thus}
-```
+$$
 
-```math
+$$
 
 \\ \; \\
 \frac{\partial E}{\partial A} = \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - t^{(i)}) (x^{(i)})^2
@@ -121,8 +120,8 @@ Now
 \\ \; \\  
 \frac{\partial E}{\partial C} = \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - t^{(i)}) \cdot 1
 \\ \; \\  
-```
-```math
+$$
+$$
 \text{Then for } (i+1)^{\text{th}} \text{ epoch}
 \\ \; \\  
 A^{(i+1)} = A^{(i)} - \text{learning rate} \times \frac{\partial E^{(i)}}{\partial A}
@@ -131,7 +130,7 @@ B^{(i+1)} = B^{(i)} - \text{learning rate} \times \frac{\partial E^{(i)}}{\parti
 \\ \; \\  
 C^{(i+1)} = C^{(i)} - \text{learning rate} \times \frac{\partial E^{(i)}}{\partial C}
 
- ```
+$$
 
  We keep updating this parameter value for given epochs.
 
