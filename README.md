@@ -59,9 +59,6 @@ $$
 
 Now we have to minimize this cost function using the gradient descent algorithm. For that we have to find the partial derivative of the cost function with each parameter. The calculation of each parameters gradient is shown below :
 
- 
-Certainly! Here is the corrected version of the provided content:
-
 $$
 \text{Error} (E) = \sum_{i=1}^{n} E^{(i)} 
 $$ 
@@ -140,7 +137,7 @@ $$
 $$  
 C^{(i+1)} = C^{(i)} - \text{learning rate} \times \frac{\partial E^{(i)}}{\partial C}
 $$
-
+ 
  We keep updating this parameter value for given epochs.
 
  
