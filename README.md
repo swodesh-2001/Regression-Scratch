@@ -261,39 +261,58 @@ Let $`z = w_1 x_1 + w_2 x_2 + b`$ be our linear model, then let $` \hat{y} = a =
 
 Also, let $`\mathcal{J}(\hat{y}, y)`$ represent our log-loss function where $`\hat{y}`$ is the predicted class and $`y`$ is the actual class.
 
- ```math
-\begin{align*}
-\mathcal{J}(\hat{y}, y) = - y \log(a) - (1-y) \log(1-a)  \tag{$\hat{y}$ = a }
-\end{align*}
-```
 
 $$
-\text{Taking partial derivative with respect to $w_1$ }
-\\ \; \\
-\begin{align*}
+\mathcal{J}(\hat{y}, y) = - y \log(a) - (1-y) \log(1-a) \quad \text{where} \; \hat{y} = a
+$$
+
+Taking the partial derivative with respect to \( w_1 \):
+
+$$
 \frac{\partial}{\partial w_1} \mathcal{J}(\hat{y}, y) =  \frac{\partial}{\partial w_1} \left[ - y \log(a) - (1-y) \log(1-a) \right]
-\end{align*}
-\\ \; \\
-\text{Using chain rule,}
-\\ \; \\
-\begin{align*}
+$$
+
+Using the chain rule:
+
+$$
 \frac{\partial \mathcal{J}}{\partial w_1}  =  \frac{\partial \mathcal{J}}{\partial a} \frac{\partial a}{\partial z} \frac{\partial z} {\partial w_1} 
-\end{align*}
-\\ \; \\
-\text{Now figuring out the individual partial derivatives}
-\\ \; \\
-\begin{align*}
- \frac{\partial \mathcal{J}}{\partial a} &= \frac{\partial}{\partial a} \left[ - y \log(a) - (1-y) \log(1-a) \right] \\
- &= -y \left( \frac{1}{a} \right) -(-1) \left( \frac{1-y}{1-a} \right) \\
- & = \frac{a-y}{a(1-a)}
-\end{align*}
-\\ \; \\
+$$
+
+Now, figuring out the individual partial derivatives:
+
+$$
+\frac{\partial \mathcal{J}}{\partial a} = \frac{\partial}{\partial a} \left[ - y \log(a) - (1-y) \log(1-a) \right]
+$$
+
+$$
+\frac{\partial \mathcal{J}}{\partial a} = -y \left( \frac{1}{a} \right) - (1-y) \left( \frac{-1}{1-a} \right) = \frac{a-y}{a(1-a)}
+$$
+
 Similarly,
-\\ \; \\
-\begin{align*}
-\frac{\partial a}{\partial z} = a(1-a)  
-\end{align*}
- $$
+
+$$
+\frac{\partial a}{\partial z} = a(1-a)
+$$
+
+Putting it all together:
+
+$$
+\frac{\partial \mathcal{J}}{\partial w_1} = \frac{a-y}{a(1-a)} \cdot a(1-a) \cdot \frac{\partial z}{\partial w_1}
+$$
+
+Since \( z = w_1 x_1 + w_2 x_2 + \cdots + w_n x_n \), we have:
+
+$$
+\frac{\partial z}{\partial w_1} = x_1
+$$
+
+Therefore:
+
+$$
+\frac{\partial \mathcal{J}}{\partial w_1} = (a-y) x_1
+$$
+
+ 
  
 Lastly,
 ```math
