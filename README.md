@@ -1,4 +1,4 @@
-# Polynomial Logistic and Multinomial Regression
+# Polynomial , Logistic and Multinomial Regression
 
 # Table of Contents
 
