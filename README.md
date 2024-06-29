@@ -60,16 +60,13 @@ $$
 Now we have to minimize this cost function using the gradient descent algorithm. For that we have to find the partial derivative of the cost function with each parameter. The calculation of each parameters gradient is shown below :
 
 $$
-\text{Error} (E) = \sum_{i=1}^{n} E^{(i)} \\
-\text{where, } n \rightarrow \text{number of datasets} \\
+\text{Error} (E) = \sum_{i=1}^{n} E^{(i)} 
+\text{where, } n \rightarrow \text{number of datasets} 
 \text{Error} = \sum_{i=1}^{n} \left( \frac{1}{2n} (t^{(i)} - y^{(i)})^2 \right) 
 \text{where, } t \rightarrow \text{actual target}   
-$$ 
-$$
+ 
 y \rightarrow  \text{predicted output}
-$$
-
-$$
+ 
 E = \frac{1}{2n} \sum_{i=1}^{n} (t^{(i)} - y^{(i)})^2 
 $$ 
 
@@ -77,19 +74,13 @@ Now
 
 $$
 \text{let } \theta \text{ be a parameter}
-$$
-
-$$
+ 
 \frac{\partial E}{\partial \theta} = \frac{1}{2n} \sum_{i=1}^{n} 2 (t^{(i)} - y^{(i)}) \frac{\partial}{\partial \theta} y^{(i)}
-$$
-$$
+ 
 = \frac{1}{2n} \sum_{i=1}^{n} 2 (t^{(i)} - y^{(i)}) \left( -\frac{\partial y^{(i)}}{\partial \theta} \right)
-$$
-
-$$
+ 
 = \frac{1}{n} \sum_{i=1}^{n} (t^{(i)} - y^{(i)}) \left( -\frac{\partial y^{(i)}}{\partial \theta} \right)
-$$
-$$
+ 
 = \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - t^{(i)}) \left( \frac{\partial y^{(i)}}{\partial \theta} \right)
 $$
 
@@ -97,38 +88,30 @@ Now
 
 $$
 \text{if } \theta = A
-$$
-$$
+ 
 \frac{\partial y^{(i)}}{\partial A} = [x^{(i)}]^2
-$$
-$$
+ 
 \frac{\partial y^{(i)}}{\partial B} = x^{(i)}
-$$
-$$
+ 
 \frac{\partial y^{(i)}}{\partial C} = 1
 $$
 
 Thus
 
-$$
+ $$
 \frac{\partial E}{\partial A} = \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - t^{(i)}) (x^{(i)})^2
-$$
-$$  
+ 
 \frac{\partial E}{\partial B} = \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - t^{(i)}) x^{(i)}
-$$
-$$  
+  
 \frac{\partial E}{\partial C} = \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - t^{(i)}) \cdot 1
-$$
+ 
 
 Then for \((i+1)^{\text{th}}\) epoch
-
-$$
+ 
 A^{(i+1)} = A^{(i)} - \text{learning rate} \times \frac{\partial E^{(i)}}{\partial A}
-$$
-$$  
+ 
 B^{(i+1)} = B^{(i)} - \text{learning rate} \times \frac{\partial E^{(i)}}{\partial B}
-$$
-$$  
+ 
 C^{(i+1)} = C^{(i)} - \text{learning rate} \times \frac{\partial E^{(i)}}{\partial C}
 $$
  
