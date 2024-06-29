@@ -47,14 +47,8 @@ With the random initialized parameter we find the output. From the output we fin
 ### Gradient Descent Algortihm for Polynomial Regression
 
 ```math
-Y^{hat} = (a(x^2)+bx+ c)
-\\ 
-\;
-\\  
-Error =  Y^{hat} - Y^{actual}
-\\
-\;
-\\
+Y^{hat} = (a(x^2)+bx+ c) \\
+Error =  Y^{hat} - Y^{actual} \\
 Cost = \frac{1}{2n} \sum_{i}^n Error^2
 
 ```
